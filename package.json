@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "author": "Zoee Silcock",
   "description": "Chat based game using MelonJS on the frontend.",
+  "repository": "zoeesilcock/mahvatar",
+  "license": "MIT",
   "scripts": {
     "start": "nodemon ./bin/www",
     "test": "mocha test"
