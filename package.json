@@ -6,8 +6,8 @@
   "repository": "zoeesilcock/mahvatar",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "test": "mocha test"
+    "start": "nodemon --use-strict --harmony-classes ./bin/www",
+    "test": "mocha --harmony_classes test"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
