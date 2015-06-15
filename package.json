@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --use-strict --harmony-classes ./bin/www",
+    "debug": "node-inspector & nodemon --debug --use-strict --harmony-classes ./bin/www",
     "test": "mocha --harmony_classes test"
   },
   "dependencies": {
@@ -21,6 +22,9 @@
   },
   "devDependencies": {
     "chai": "^3.0.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "node-inspector": "^0.10.2",
+    "sinon": "^1.15.3",
+    "sinon-chai": "^2.8.0"
   }
 }
