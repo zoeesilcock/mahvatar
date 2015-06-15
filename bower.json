@@ -1,0 +1,14 @@
+{
+  "name": "mahvatar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zoeesilcock/mahvatar",
+  "authors": [
+    "Zoee Silcock <mrzoee@gmail.com>"
+  ],
+  "description": "Chat based game using MelonJS on the frontend.",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "~2.2.7"
+  }
+}
