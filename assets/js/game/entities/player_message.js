@@ -28,6 +28,7 @@ game.PlayerMessage.Container = me.Container.extend({
 
     if (this.currentMessage && this.currentMessage.length > 0) {
       var labelSize = this.messageLabel.label.measureText(renderer, this.currentMessage);
+
       this.pos.x = this.player.pos.x + 64;
       this.pos.y = this.player.pos.y;
       this.messageBackground.width = labelSize.width + 10;

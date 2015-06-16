@@ -80,7 +80,7 @@ window.game = {
   joiningPlayerCount: function() {
     var count = 0;
 
-    for (id in game.players) {
+    for (var id in game.players) {
       var player = game.players[id];
 
       if (player.state == 'will_join') {

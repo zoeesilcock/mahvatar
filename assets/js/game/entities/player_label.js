@@ -11,7 +11,8 @@ game.PlayerName.Container = me.Container.extend({
   },
 
   draw: function(renderer) {
-    labelSize = this.nameLabel.label.measureText(renderer, this.player.userName);
+    var labelSize = this.nameLabel.label.measureText(renderer, this.player.userName);
+
     this.pos.x = this.player.pos.x + 32 - (labelSize.width / 2);
     this.pos.y = this.player.pos.y + 64;
     this.nameBackground.width = labelSize.width + 10;

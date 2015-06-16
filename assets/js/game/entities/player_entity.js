@@ -14,6 +14,8 @@ game.PlayerEntity = me.Entity.extend({
 
     var size = this.body.getBounds().width;
     this.body.addShape(new me.Rect(0, 0, size, size));
+    this.body.collisionType = me.collision.types.PLAYER_OBJECT;
+    this.body.setCollisionMask(me.collision.types.WORLD_SHAPE);
 
     this.nameContainer = new game.PlayerName.Container(this);
     me.game.world.addChild(this.nameContainer, 5);
@@ -23,7 +25,7 @@ game.PlayerEntity = me.Entity.extend({
   },
 
   setUserDetails: function(details) {
-    oldHead = this.headPath;
+    var oldHead = this.headPath;
 
     this.userId = details.id;
     this.userName = details.name;
@@ -41,7 +43,7 @@ game.PlayerEntity = me.Entity.extend({
   },
 
   loadHeadResource: function() {
-    imageName = 'custom_head_' + this.userId;
+    var imageName = 'custom_head_' + this.userId;
 
     me.loader.load({
       name: imageName,
@@ -100,11 +102,11 @@ game.PlayerEntity = me.Entity.extend({
   },
 
   leavingLeftSide: function() {
-    return this.pos.x < 0 && this.velocity < 0;
+    return (this.pos.x < this.body.getBounds().width && this.velocity < 0);
   },
 
   leavingRightSide: function() {
-    return this.pos.x > (me.game.viewport.width - this.body.getBounds().width) && this.velocity > 0;
+    return (this.pos.x > (me.game.viewport.width - this.body.getBounds().width) && this.velocity > 0);
   },
 
   join: function() {
@@ -131,6 +133,6 @@ game.PlayerEntity = me.Entity.extend({
   },
 
   onCollision: function(response, other) {
-    other.name == 'Player' ? false : true
+    return true;
   }
 });

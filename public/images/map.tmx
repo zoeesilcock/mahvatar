@@ -9,6 +9,10 @@
   </data>
  </layer>
  <objectgroup name="collision" width="0" height="0">
-  <object x="-328" y="105" width="2603" height="57"/>
+  <object x="-328" y="105" width="2603" height="57">
+   <properties>
+    <property name="collisionType" value="WORLD_SHAPE"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
