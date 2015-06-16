@@ -6,14 +6,6 @@ html
     script(type='text/javascript').
       FIREBASE_URL = "#{firebase_url}";
       window.addEventListener('load', function() { game.onload(); }, false);
-    script(type='text/javascript', src='/javascripts/melonJS-2.1.1.js')
     script(type='text/javascript', src='/bower_components/firebase/firebase.js')
-    script(type='text/javascript', src='/javascripts/game/game.js')
-    script(type='text/javascript', src='/javascripts/game/resources.js')
-    script(type='text/javascript', src='/javascripts/game/entities/HUD.js')
-    script(type='text/javascript', src='/javascripts/game/entities/head_entity.js')
-    script(type='text/javascript', src='/javascripts/game/entities/player_entity.js')
-    script(type='text/javascript', src='/javascripts/game/entities/player_label.js')
-    script(type='text/javascript', src='/javascripts/game/entities/player_message.js')
-    script(type='text/javascript', src='/javascripts/game/screens/play.js')
+    script(type='text/javascript', src='/javascripts/game.js')
   body
